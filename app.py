@@ -10,7 +10,7 @@ def static_page():
 
 @app.route('/generate/<string:link>')
 def Func_gerate(link):
-    result = functions.set_xing(link)
+    result = functions.set_xing(link.replace('<','').replace('>',''))
     return result
 
 
